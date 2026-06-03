@@ -26,6 +26,12 @@ else
   RPATH_ORIGIN='$ORIGIN'
 fi
 
+
+if [ ! -d "../mb" ]; then
+  echo "You will need mb library beside this folder to build".
+  exit 1
+fi
+
 mkdir -p "$BUILD_DIR"
 
 if [ ! -f "$BUILD_DIR/libSDL3.dylib" ] && [ ! -f "$BUILD_DIR/libSDL3.0.dylib" ] && [ ! -f "$BUILD_DIR/libSDL3.a" ]; then

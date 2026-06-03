@@ -12,6 +12,11 @@ set COMPILE_FLAGS=/W4 /Od /Ob0 /EHsc /Zi -external:W0
 set DEFINE_FLAGS=-DVK_NO_PROTOTYPES -DVK_USE_PLATFORM_WIN32_KHR
 set BUILD_DIR=.build
 
+if not exist ..\mb (
+  echo You will need mb library beside this folder to build
+  exit /b 1
+)
+
 if not exist .build mkdir .build
 if not exist .build\SDL3.lib call scripts\install_sdl3.cmd || exit /b 1
 if not exist .build\vma.lib  call scripts\build_vma.cmd || exit /b 1
