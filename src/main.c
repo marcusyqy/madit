@@ -422,3 +422,9 @@ int main() {
 #include "render/render.c"
 #include "render/shader_compiler.c"
 #include "render/font.c"
+
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb/stb_image.h"
+#define STB_TRUETYPE_IMPLEMENTATION
+#include "stb/stb_truetype.h"
