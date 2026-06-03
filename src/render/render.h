@@ -3,7 +3,7 @@
 
 #include <SDL3/SDL.h>
 #include <volk/volk.h>
-#include "base/arena.h"
+#include "mb/mb_arena.h"
 #include <vma/vk_mem_alloc.h>
 
 #define VK_MAX_FRAMES_IN_FLIGHT 2

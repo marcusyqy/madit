@@ -26,7 +26,7 @@ if "%VULKAN_SDK%"=="" (
 )
 
 set LINK_FLAGS=/link SDL3.lib vma.lib freetype.lib %VULKAN_SDK%\Lib\shaderc_shared.lib
-set INCLUDE_FLAGS=-external:I..\third_party\SDL\include /I..\src -external:I..\third_party -external:I..\third_party\freetype\include
+set INCLUDE_FLAGS=-external:I..\third_party\SDL\include /I..\src -external:I..\third_party -external:I..\third_party\freetype\include /I..\..\mb
 REM -external:I%VULKAN_SDK%\Include
 
 pushd .build

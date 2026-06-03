@@ -1,5 +1,5 @@
 #include "render.h"
-#include "base/arena.h"
+#include "mb/mb_arena.h"
 #include <stdio.h>
 
 #include <vulkan/vulkan.h>
@@ -165,7 +165,6 @@ static void vk_choose_physical_device() {
   vkEnumeratePhysicalDevices(vk_engine.instance, &count, pd);
 
   for(uint32_t i = 0; i < count; ++i) {
-
     mb_TempArena scope_temp = mb_begin_temp_arena(temp.arena);
     uint32_t queue_count = 0;
     vkGetPhysicalDeviceQueueFamilyProperties(pd[i], &queue_count, 0);

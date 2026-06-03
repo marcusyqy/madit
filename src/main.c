@@ -1,5 +1,5 @@
-#include "base/base.h"
-#include "base/arena.h"
+#include "mb/mb_base.h"
+#include "mb/mb_arena.h"
 #include <stdio.h>
 #include <SDL3/SDL.h>
 #include <stdint.h>
@@ -164,8 +164,8 @@ static RenderPipeline create_default_render_pipeline(void) {
     .dstAlphaBlendFactor = 0,
     .alphaBlendOp = 0,
     .colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT,
-
   };
+
   VkPipelineColorBlendStateCreateInfo color_blend_state_create_info = {
     .sType = VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO,
     .pNext = 0,
@@ -415,11 +415,10 @@ int main() {
 #endif
 }
 
+#define MB_INCLUDE_IMPLEMENTATION
+#include "mb/mb.h"
+
 // build c files.
-#include "base/arena.c"
-#include "base/file.c"
-#include "base/str.c"
-#include "base/os.c"
 #include "render/render.c"
 #include "render/shader_compiler.c"
 #include "render/font.c"

@@ -2,7 +2,7 @@
 #define _SHADER_COMPILER_H_
 
 #include <shaderc/shaderc.h>
-#include "base/str.h"
+#include "mb/mb_str.h"
 
 typedef struct ShadercInfo {
   shaderc_compiler_t compiler;

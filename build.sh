@@ -104,7 +104,7 @@ else
 fi
 
 clang $CFLAGS $DEFINES \
-  -Ithird_party/SDL/include -Isrc -Ithird_party -Ithird_party/freetype/include \
+   -I../mb -Ithird_party/SDL/include -Isrc -Ithird_party -Ithird_party/freetype/include \
   -c src/build.c -o "$BUILD_DIR/madit.o"
 
 clang++ "$BUILD_DIR/madit.o" -o "$BUILD_DIR/madit" \

@@ -2,3 +2,4 @@
 -Ithird_party/SDL/include
 -Ithird_party/freetype/include
 -Ithird_party
+-I../mb
